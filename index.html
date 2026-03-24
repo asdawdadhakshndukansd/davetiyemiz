@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+  <title>Güzide & Abdullah Davet</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <meta property="og:title" content="Güzide & Abdullah Davet" />
+<meta property="og:image" content="https://SENIN-LINKIN/image/kapak.jpg" />
+<meta property="og:url" content="https://SENIN-LINKIN/" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+</head>
+<body>
+
+  <main class="page">
+    <section id="davet" class="screen active" aria-label="Davetiye ekranı">
+      <div class="viewport">
+        <div
+          id="stageDavet"
+          class="stage"
+          data-design-width="1080"
+          data-design-height="2800"
+        >
+          <img src="image/davet.png" alt="Davetiye" class="bg" />
+
+          <!-- Sayaç -->
+        <div class="sayac">
+
+  <div class="sayac-blok">
+    <div id="gun" class="sayac-sayi">00</div>
+    <div class="sayac-etiket">gün</div>
+  </div>
+
+  <div class="sayac-ayirici">:</div>
+
+  <div class="sayac-blok">
+    <div id="saat" class="sayac-sayi">00</div>
+    <div class="sayac-etiket">saat</div>
+  </div>
+
+  <div class="sayac-ayirici">:</div>
+
+  <div class="sayac-blok">
+    <div id="dakika" class="sayac-sayi">00</div>
+    <div class="sayac-etiket">dakika</div>
+  </div>
+
+  <div class="sayac-ayirici">:</div>
+
+  <div class="sayac-blok">
+    <div id="saniye" class="sayac-sayi">00</div>
+    <div class="sayac-etiket">saniye</div>
+  </div>
+
+</div>
+
+          <!-- Tıklama alanları -->
+<a
+  class="hitbox konum"
+  href="https://www.google.com/maps/place/BATI+ŞEHİR+KONUTLARI/@38.3785593,31.4030404,17z/data=!4m6!3m5!1s0x14cfe90033ec45e3:0x684f9721dcf4bf49!8m2!3d38.3785593!4d31.4056153!16s%2Fg%2F11w51txmc0?entry=ttu&g_ep=EgoyMDI2MDMxMC4wIKXMDSoASAFQAw%3D%3D"
+  target="_blank"
+  rel="noopener"
+  aria-label="Konum bilgisi"
+></a>
+
+<button
+  id="openMemory"
+  class="hitbox hatira"
+  type="button"
+  aria-label="Hatıra köşemize katıl"
+></button>
+
+<a
+  class="hitbox instagram"
+  href="https://www.instagram.com/vs.visora?igsh=djNyNnN4bmdraTI0"
+  target="_blank"
+  rel="noopener"
+  aria-label="Instagram"
+></a>
+
+<a
+  class="hitbox whatsapp"
+  href="https://wa.me/905372395824"
+  target="_blank"
+  rel="noopener"
+  aria-label="WhatsApp"
+></a>
+    </section>
+  </main>
+
+  <!-- Hatıra bottom sheet -->
+  <div id="sheetOverlay" class="sheet-overlay" aria-hidden="true">
+    <div
+      class="memory-sheet"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="memoryTitle"
+    >
+      <div class="sheet-handle" aria-hidden="true"></div>
+
+      <button
+        id="closeSheet"
+        class="sheet-close"
+        type="button"
+        aria-label="Kapat"
+      >
+        ×
+      </button>
+
+      <h2 id="memoryTitle">Hatıra Köşemiz</h2>
+      <p class="sheet-subtitle">Bir hatıra bırakın</p>
+
+      <div class="sheet-tabs">
+       <button id="photoTab" class="active" type="button">Fotoğraf</button>
+  <button id="audioTab" type="button">Sesli Not</button>
+  <button id="videoTab" type="button">Video</button>
+      </div>
+
+      <div id="photoPanel" class="sheet-panel">
+        <label for="fileInput" class="upload-btn">Fotoğraf Yükle</label>
+        <input id="fileInput" type="file" accept="image/*" multiple hidden />
+        <p id="fileNameText" class="helper-text">Henüz fotoğraf seçilmedi</p>
+      </div>
+
+      <div id="audioPanel" class="sheet-panel hidden">
+        <div class="audio-actions">
+          <button id="startRecord" type="button">Kaydı Başlat</button>
+          <button id="stopRecord" type="button" disabled>Kaydı Durdur</button>
+        </div>
+
+        <p id="recordText" class="helper-text">Hazır</p>
+        <audio id="audioPreview" class="hidden audio-preview" controls></audio>
+      </div>
+
+      <div id="videoPanel" class="sheet-panel hidden">
+  <label for="videoInput" class="upload-btn">Video Yükle</label>
+  <input id="videoInput" type="file" accept="video/*" multiple hidden />
+  <p id="videoNameText" class="helper-text">Henüz video seçilmedi</p>
+  <p class="helper-text">Video uzunluğu 60 saniyeden fazla olamaz.</p>
+</div>
+
+      <input
+        id="nameInput"
+        class="sheet-input"
+        type="text"
+        placeholder="İsminiz (isteğe bağlı)"
+      />
+
+      <button id="sendBtn" class="send-btn" type="button">Gönder</button>
+      <p id="resultMsg" class="result-msg"></p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html, body{
+  width:100%;
+  height:100%;
+}
+
+body{
+  background:#000;
+  overflow:hidden;
+  font-family:Arial, sans-serif;
+}
+
+.site{
+  position:relative;
+  width:100vw;
+  height:100dvh;
+  overflow:hidden;
+}
+
+.sayfa{
+  position:absolute;
+  inset:0;
+  display:none;
+}
+
+.sayfa.aktif{
+  display:block;
+}
+
+.arka{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+  z-index:1;
+}
+
+/* Girişteki mühür tıklama alanı */
+#muhur{
+  position:absolute;
+  left:50%;
+  top:28%;
+  transform:translate(-50%, -50%);
+  width:170px;
+  height:170px;
+  border:none;
+  background:transparent;
+  cursor:pointer;
+  z-index:5;
+}
+
+/* Davetiye sayfasındaki geri sayım */
+.sayac{
+  position:absolute;
+  left:50%;
+  top:58.5%;
+  transform:translate(-50%, -50%);
+  min-width:220px;
+  text-align:center;
+  color:#6f5213;
+  font-size:20px;
+  font-weight:700;
+  letter-spacing:0.5px;
+  z-index:5;
+  text-shadow:0 1px 0 rgba(255,255,255,0.25);
+}
+
+/* Tıklanabilir buton alanları */
+.tiklama{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  width:42%;
+  height:3.8%;
+  z-index:6;
+  display:block;
+  border-radius:999px;
+  background:transparent;
+}
+
+/* Görseline göre yaklaşık konumlar */
+.konum{
+  top:74.8%;
+}
+
+.hatira{
+  top:81.7%;
+}
+
+/* Sağ alttaki sosyal ikon tıklama alanları */
+.sosyal{
+  position:absolute;
+  width:5.2%;
+  height:2.7%;
+  z-index:6;
+  display:block;
+  background:transparent;
+}
+
+.instagram{
+  right:10.5%;
+  bottom:2.6%;
+}
+
+.whatsapp{
+  right:4%;
+  bottom:2.6%;
+}
+
+/* Geçici debug için açabilirsin */
+/*
+#muhur,
+.tiklama,
+.sosyal{
+  outline:2px solid rgba(255,0,0,.7);
+  background:rgba(255,255,255,.08);
+}
+*/
